@@ -28,12 +28,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Install dependencies
-        run: npm i
       
       - name: Install Sass
         run: npm install -g sass
+      
+      - name: Install Rollup
+        run: npm install -g rollup
+      
+      - name: Install dependencies
+        run: npm i
 
       - name: Build
         run: npm run build
