@@ -1,10 +1,11 @@
 {
     "main": "main.js",
     "scripts": {
-        "build": "npm run copy-assets && npm run build-scss && npm run build-ts",
+        "build": "npm run copy-assets && npm run copy-index && npm run build-scss && npm run build-ts",
         "build-scss": "sass --style=compressed --no-source-map ./src/scss/style.scss ./dist/css/style.css",
         "build-ts": "rollup -c",
         "copy-assets": "cpy \"src/assets/**/*\" \"dist/assets\"",
+        "copy-index": "cpy \"index.html\" \"dist/index.html\"",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Rick Gray",
