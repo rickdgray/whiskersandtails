@@ -1,0 +1,45 @@
+:root {
+    --background-color: #000000;
+    --primary-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    /* outline to see bounds */
+    outline: red solid 1px;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, div {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+nav > .nav-section {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex-grow: 1;
+}

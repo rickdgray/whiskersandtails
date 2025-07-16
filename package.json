@@ -1,0 +1,16 @@
+{
+    "main": "main.js",
+    "scripts": {
+        "build": "npm run build-scss && npm run build-ts",
+        "build-scss": "sass --style=compressed --no-source-map .\\src\\scss\\style.scss .\\dist\\css\\style.css",
+        "build-ts": "rollup -c",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Rick Gray",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-typescript": "^11.1.6",
+        "tslib": "^2.6.2"
+    }
+}
