@@ -1,6 +1,6 @@
 :root {
-    --background-color: #000000;
-    --primary-color: #ffffff;
+    --background-color: hsl(42, 25%, 87%);
+    --primary-color: hsl(0, 0%, 13%);
 }
 
 * {
@@ -18,9 +18,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, div {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Winky Rough", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 1rem;
+    font-style: normal;
     color: var(--primary-color);
 }
 
@@ -28,16 +29,26 @@ a {
     text-decoration: none;
 }
 
-nav {
-    display: flex;
-    width: 100%;
-}
+.container {
+    width: 80%;
+    margin: 0 auto;
 
-nav > .nav-section {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+
+        & > .nav-section {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 main {
