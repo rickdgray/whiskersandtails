@@ -1,5 +1,6 @@
 :root {
-    --background-color: hsl(42, 25%, 87%);
+    --nav-background-color: hsl(42, 25%, 87%);
+    --background-color: hsl(42, 25%, 92%);
     --primary-color: hsl(0, 0%, 13%);
 }
 
@@ -17,7 +18,7 @@ html {
 body {
     background-color: var(--background-color);
     margin: 0;
-    height: 100vh;
+    padding: 0;
     display: flex;
     flex-direction: column;
 }
@@ -37,11 +38,15 @@ a {
 .navbar {
     position: sticky;
     top: 0;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--nav-background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     .logo {
         float: left;
@@ -76,4 +81,19 @@ a {
 
 main {
     flex-grow: 1;
+    max-width: 70%;
+    margin: auto;
+}
+
+.footer {
+    background-color: var(--nav-background-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+
+    p {
+        margin: 0;
+        font-size: 1rem;
+    }
 }
