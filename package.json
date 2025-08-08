@@ -15,5 +15,9 @@
         "@rollup/plugin-typescript": "^11.1.6",
         "cpy-cli": "^5.0.0",
         "tslib": "^2.6.2"
+    },
+    "dependencies": {
+        "embla-carousel": "^8.6.0",
+        "embla-carousel-autoplay": "^8.6.0"
     }
 }
