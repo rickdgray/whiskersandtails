@@ -1,4 +1,4 @@
-import EmblaCarousel from 'embla-carousel'
+import EmblaCarousel, { EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay';
 
 // grab elements
@@ -10,12 +10,10 @@ const navigationHeight = navigation ? navigation.offsetHeight + 20 : 0;
 document.documentElement.style.setProperty('--scroll-padding', `${navigationHeight}px`);
 
 // carousels for rescues
-const options = {
+const options: EmblaOptionsType = {
     loop: true
 };
 
-const plugins = [Autoplay()];
+const plugins: EmblaPluginType[] = [Autoplay()];
 
 const emblaApi = EmblaCarousel(emblaNode, options, plugins);
-
-console.log(emblaApi.slideNodes());
