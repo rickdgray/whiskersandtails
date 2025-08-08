@@ -1,19 +1,22 @@
-import EmblaCarousel, { EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
+import EmblaCarousel, { EmblaOptionsType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay';
 
-// grab elements
-const navigation = document.querySelector('.navbar') as HTMLElement;
-const emblaNode = document.querySelector('.embla') as HTMLElement;
-
 // nav autoscroll
+const navigation = document.querySelector('.navbar') as HTMLElement;
 const navigationHeight = navigation ? navigation.offsetHeight + 20 : 0;
 document.documentElement.style.setProperty('--scroll-padding', `${navigationHeight}px`);
 
 // carousels for rescues
-const options: EmblaOptionsType = {
-    loop: true
-};
+const emblaNodes = [...document.querySelectorAll('.embla')] as HTMLDivElement[];
+const options: EmblaOptionsType = { loop: true, align: 'center' };
+const carousels = emblaNodes.map((emblaNode) => {
+    const autoplay = Autoplay();
+    const carousel = EmblaCarousel(emblaNode, options, [autoplay]);
 
-const plugins: EmblaPluginType[] = [Autoplay()];
+    autoplay.play();
 
-const emblaApi = EmblaCarousel(emblaNode, options, plugins);
+    emblaNode.addEventListener('mouseenter', () => autoplay.stop());
+    emblaNode.addEventListener('mouseleave', () => autoplay.play());
+
+    return carousel;
+});
