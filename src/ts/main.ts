@@ -1,5 +1,13 @@
 import EmblaCarousel, { EmblaOptionsType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay';
+import { library, dom, config } from '@fortawesome/fontawesome-svg-core'
+import { faAt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons'
+
+// fontawesome
+config.autoAddCss = true;
+library.add(faAt, faEnvelope, faFacebook, faInstagram, faTiktok);
+dom.watch();
 
 // nav autoscroll
 const navigation = document.querySelector('.navbar') as HTMLElement;
