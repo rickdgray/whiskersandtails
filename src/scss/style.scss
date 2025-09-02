@@ -4,12 +4,6 @@
     --primary-color: hsl(0, 0%, 13%);
 }
 
-// * {
-//     box-sizing: border-box;
-//     /* outline to see bounds */
-//     outline: red solid 1px;
-// }
-
 html {
     scroll-behavior: smooth;
     scroll-padding: var(--scroll-padding, 5rem);
@@ -116,8 +110,6 @@ main {
     max-width: 70%;
     margin: auto;
 
-    .about {}
-
     .rescues {
         .rescues-grid {
             padding: 1em;
@@ -132,10 +124,6 @@ main {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
-
-                h3 {
-                    margin-top: 0;
-                }
 
                 .embla {
                     aspect-ratio: 1 / 1;
